@@ -6,50 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="media/favicon.ico" type="image/x-icon">
     <title>Crochet Tutorials App First Brainstorm</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #date {
+            color: #272657;
+            background-color: lavender;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div>TABLE OF CONTENTS</div>
-        <nav>
-            <ul>
-                <li><a href="#introductions">Introductions</a></li>
-                <li><a href="#projectgoals">Project Goals</a></li>
-                <li><a href="#recordings">Meeting Recordings</a></li>
-                <li><a href="#survey">Survey</a></li>
-            </ul>
-        </nav>
+        <div class="toc" style="color:rgb(39, 38, 87);">TABLE OF CONTENTS</div>
+        <div class="navegation">
+            <nav>
+                <ul>
+                    <li style="font-size: 1.2em;"><a href="#introductions">Introductions</a></li>
+                    <li style="font-size: 1.2rem;"><a href="#projectgoals">Project Goals</a></li>
+                    <li style="font-size: 2.3ex;"><a href="#recordings">Meeting Recordings</a></li>
+                    <li style="font-size: 1.2em;"><a href="#survey">Survey</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <section>
-            <img src="https://static.thenounproject.com/png/1710231-200.png" alt="">
-            <h3>Friday, October 1, 2021 (10AM PDT)</h3>
-            <h1>Stitch Central App First Brainstorm</h1>
+        <section class="title">
+            <img class="image" src="https://static.thenounproject.com/png/1710231-200.png" alt="">
+            <h3 id="date" style="color: hsl(241, 39.2, 24.5)">Friday, October 1, 2021 (10AM PDT)</h3>
+            <h1 class="titleheader">Stitch Central App First Brainstorm</h1>
             <p>This website outlines the first official meeting of the Stitch Central 
-                development team-- a seven-person <br>group commissioned to create a web application
+                development team-- a seven-person group commissioned to create a web application
                 called Stitch Central &trade;</p>
         </section>
-        <section>
-            <h2 id="introductions">Introductions</h2>
-            <p>The following is our list of devs in <b>attendance</b></p>
-            <ol> 
-                <li>Donny Dittlesworth</li>
-                <li>Melissa Shellington</li>
-                <li>Lisa Summerville</li>
-                <li>Jeffrey Jefferson</li>
-                <li>Ashley Stonebottom</li>
-            </ol>
-            <p>The following devs were <i>absent</i></p>
-            <ol>
-                <li>Kyle Rushing</li>
-                <li>Maxine Maryland</li>
-            </ol>
-            <p>Each dev in attendance gave a brief Introduction of who they are,
-                where they are from, and their prior <br>software engineering work.
+        <section class="introductions">
+            <h2 id="introheader">Introductions</h2>
+            <div class="flexboxcontainer">
+                <div class="flexboxitem flex1">
+                    <p style="padding: 10px;">The following devs were <b>present</b></p>
+                    <ol class="ol presentlist"> 
+                        <li>Donny Dittlesworth</li>
+                        <li>Melissa Shellington</li>
+                        <li>Lisa Summerville</li>
+                        <li>Jeffrey Jefferson</li>
+                        <li>Ashley Stonebottom</li>
+                    </ol>
+                </div>
+                <div class="flexboxitem flex2">
+                    <p style="padding: 10px;">The following devs were <b>absent</b></p>
+                    <ol class="ol absentlist">
+                        <li>Kyle Rushing</li>
+                        <li>Maxine Maryland</li>
+                    </ol>
+                </div>
+            </div>
+            <p class="devsummary">Each dev in attendance gave a brief Introduction of who they are,
+                where they are from, and their prior software engineering work.
             </p>
         </section>
-        <section>
+        <section class="goals">
             <h2 id="projectgoals">Project Goals</h2>
-            <details>
+            <details class="mission">
                 <summary>Our Mission Statement</summary>
                 <p><em>"To cultivate a compassionate community of crafty and 
                 creative crochet connoisseurs is our central concern"</em>
@@ -57,14 +72,14 @@
             </details>
             <p>Our end product will be a web application called "Stitch Central" 
                 where cochet and knitting enthusiasts can:</p>
-            <ol>
+            <ol class="ol goallist">
                 <li>Follow intuitive tutorials for beginners and experts alike</li>
                 <li>Discuss current crochet and knitting trends in forums</li>
                 <li>Ask and answer questions related to needle work</li>
             </ol>
-            <p><strong>This project is scheduled to be completed by December 1, 2021</strong></p>
+            <p class="timeline"><strong>This project is scheduled to be completed by December 1, 2021</strong></p>
         </section>
-        <section>
+        <section class="recorded">
             <h2 id="recordings">Meeting Recordings</h2>
             <p>The following is a screen recording of the zoom meeting:</p>
             <video src="media/video.mp4" controls></video> <br>
@@ -73,62 +88,75 @@
         </section>
     </main>
     <hr />
-    <footer>
-        <h4 id="survey">Fill out this brief survey</h4>
-        <form>
-            <fieldset>
-                <legend>Choose your current position:</legend>
+    <footer class="footer">
+        <h4 id="surveyheader">Fill out this brief survey</h4>
+        <div class="gridcontainer">
+            <div class="griditem grid1">
+                <fieldset>
+                    <legend>Choose your current position:</legend>
+    
+                    <input type="radio" id="programmer" name="position">
+                    <label for="programmer">Programmer</label><br/>
+    
+                    <input type="radio" id="softwareengineer" name="position">
+                    <label for="softwareengineer">Software Engineer</label><br/>
+    
+                    <input type="radio" id="manager" name="position">
+                    <label for="manager">Manager</label><br/>
+                </fieldset>
+    
+            </div>
+            <div class="griditem grid2">
+                <p>Select which pets you have:</p>
+                <input type="checkbox" id="animal1" name="animal1" value="cat">
+                <label for="animal1"> Cat</label><br>
 
-                <input type="radio" id="programmer" name="position">
-                <label for="programmer">Programmer</label><br/>
+                <input type="checkbox" id="animal2" name="animal2" value="dog">
+                <label for="animal2"> Dog</label><br>
 
-                <input type="radio" id="softwareengineer" name="position">
-                <label for="softwareengineer">Software Engineer</label><br/>
+                <input type="checkbox" id="animal3" name="animal3" value="fish">
+                <label for="animal3"> Fish</label><br>
+            </div>
+            <div class="griditem grid3">
+                <p>Choose which hours are you most productive:</p>
+                <select name="hours">
+                    <option value="early-morning">Early Morning</option>
+                    <option value="morning">Morning</option>
+                    <option value="early-afternoon">Early Afternoon</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="night">Night</option>
+                </select> <br>
+            </div>
+            <div class="griditem grid4">
+                <label for="work">Choose how you report to work:</label> <br>
+                <input list="work-options" name="work" id="work">
 
-                <input type="radio" id="manager" name="position">
-                <label for="manager">Manager</label><br/>
-            </fieldset>
-
-            <p>Select which pets you have:</p>
-            <input type="checkbox" id="animal1" name="animal1" value="cat">
-            <label for="animal1"> Cat</label><br>
-
-            <input type="checkbox" id="animal2" name="animal2" value="dog">
-            <label for="animal2"> Dog</label><br>
-
-            <input type="checkbox" id="animal3" name="animal3" value="fish">
-            <label for="animal3"> Fish</label><br>
-
-            <p>Choose which hours are you most productive:</p>
-            <select name="hours">
-                <option value="early-morning">Early Morning</option>
-                <option value="morning">Morning</option>
-                <option value="early-afternoon">Early Afternoon</option>
-                <option value="afternoon">Afternoon</option>
-                <option value="night">Night</option>
-            </select> <br>
-
-            <label for="work">Choose how you report to work:</label> <br>
-            <input list="work-options" name="work" id="work">
-
-            <datalist id="work-options">
-                <option value="In-Person">
-                <option value="Remote">
-                <option value="Hybrid">
-            </datalist> <br>
-
-            <label for="currdate">Current Date:</label> <br>
-            <input type="date" id="currdate" name="currdate"
-            min="2000-11-03" max="2021-11-03"> <br>
-
-            <label for="email">Email:</label> <br>
-            <input type="text" id="email" name="email"> <br>
-
-            <label for="concerns">Please enter any comments or concerns:</label> <br>
-            <textarea name="concerns" id="concerns" cols="30" rows="5"></textarea> <br>
-
-            <button>Submit</button>
-        </form>
+                <datalist id="work-options">
+                    <option value="In-Person">
+                    <option value="Remote">
+                    <option value="Hybrid">
+                </datalist> <br>
+            </div>
+            <div class="griditem grid5">
+                <label for="currdate">Current Date:</label> <br>
+                <input type="date" id="currdate" name="currdate"
+                min="2000-11-03" max="2021-11-03"> <br>
+            </div>
+            <div class="griditem grid6">
+                <label for="email">Email:</label> <br>
+                <input type="text" id="email" name="email"> <br>
+            </div>
+            <div class="griditem grid7">
+                <label for="concerns">Please enter any comments or concerns:</label> <br>
+                <textarea name="concerns" id="concerns" cols="30" rows="5"></textarea> <br>
+            </div>
+            <form>
+                <div class="griditem grid8">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+        <p class="hidden">This text is hidden with display: none</p>
     </footer>
 </body>
 </html>
