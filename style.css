@@ -1,0 +1,184 @@
+/* set default boxes and text color */
+* {
+    color: rgb(39, 38, 87);
+    padding: 0px;
+    border: solid 0px;
+    margin: 0px;
+    font-family: 'Signika', sans-serif;
+}
+/* change background color of the entire page */
+body {
+   background-color: lavender;
+}
+/* style table of contents */
+a[href^="#"] {
+    color: darkviolet;
+  }
+.toc {
+    max-width: 200px;
+    font-size: 0.2in;
+    border: thin solid blueviolet;
+    background-color: rgb(232, 214, 255);
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.navegation {
+    border: 10px solid lavender;
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+ul li {
+    margin: 5px;
+}
+/* style boxes around photo */
+.image {
+    height: 5cm;
+    min-width: 190px;
+    border: solid blueviolet;
+    background-color: rgb(232, 214, 255);
+    border-width: 1px;
+    border-radius: 150px;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+/* title, date, and introduction sections */
+#date {
+    display: block;
+    width: 325px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: auto;
+    border: thin solid blueviolet;
+    background-color: rgb(232, 214, 255);
+}
+.intro {
+    margin: 20PX;
+}
+.title .titleheader, #introheader, #projectgoals, #recordings { 
+    text-decoration-line: underline;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.title > p {
+    width: 440px;
+    padding: 10px;
+    border: thin solid blueviolet;
+    background-color: rgb(232, 214, 255);
+    margin-left: 80px;
+}
+.introductions {
+    margin: 20px;
+    margin-left: 50px;
+}
+/* flexbox content for lists of devs */
+.flexboxcontainer {
+    display: flex;
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-flow: row;
+    margin-top: 0px;
+    margin: 20px;
+}
+.flexboxitem {
+    width: 300px;
+    border: thin solid blueviolet;
+    background-color: rgb(232, 214, 255);
+    padding: 30px;
+    margin: 10px;
+}
+/* summary of dev introductions */
+.devsummary {
+    padding: 10px;
+    width: 500px;
+    border: thin solid blueviolet;
+    background-color: rgb(232, 214, 255);
+    margin-left: 30px;
+}
+/* goals styling */
+.goals {
+    margin-left: 50px;
+}
+details + p {
+    width: 760px;
+    padding: 10px;
+    border: thin solid blueviolet;
+    background-color: rgb(232, 214, 255);
+    margin-left: 30px;
+}
+details ~ ol.goallist {
+    width: 400px;
+    border: thin solid blueviolet;
+    background-color: rgb(232, 214, 255);
+    padding: 10px;
+    margin: 20px;
+    padding-left: 35px;
+    margin-left: 30px;
+}
+.mission, .timeline {
+    width: 400px;
+    border: thin solid;
+    background-color: rgb(232, 214, 255);
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+
+}
+.mission p {
+    padding: 10px;
+}
+/* change color of summary when clicked */
+summary:active {
+    color: darkviolet;
+}
+/* recording allignment with media query*/
+@media (min-width: 750px) {
+    .recorded {
+        text-align: center;
+    }
+    button:hover {
+        color: darkorchid;
+    }
+}
+video, audio {
+    padding: 10px;
+    border: thick solid darkviolet;
+    background-color: rgb(232, 214, 255);
+    margin: 20px;
+}
+/* css grid content for survey */
+#surveyheader {
+    text-decoration-line: underline;
+    padding: 10px;
+    margin: 20px;
+    margin-bottom: 0px;
+}
+.gridcontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 350px);
+    grid-template-rows: 150px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+.griditem {
+    width: 300px;
+    border: thin solid blueviolet;
+    background-color: rgb(232, 214, 255);
+    padding: 15px;
+    margin: 10px;
+}
+.hidden {
+    display: none;
+}
+
